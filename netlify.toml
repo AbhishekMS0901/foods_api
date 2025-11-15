@@ -1,0 +1,8 @@
+[build]
+  publish = "public" 
+  functions = "./netlify/functions" 
+[[redirects]]
+  from = "/api/*"
+  to = "./netlify/functions/api/:splat" # 'api' matches the filename 'api.js'
+  status = 200
+  force = true
